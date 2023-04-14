@@ -1,0 +1,4 @@
+(executable
+ (public_name DMPF)
+ (name main)
+ (libraries DMPF))

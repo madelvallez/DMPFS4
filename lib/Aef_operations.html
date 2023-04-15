@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
-<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta content="text/html"; charset="utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link rel="previous" href="Aef_proprietes.html">
@@ -24,15 +24,108 @@
 
 <pre><span id="MODULEAef_operations"><span class="keyword">module</span> Aef_operations</span>: <code class="code">sig</code> <a href="Aef_operations.html">..</a> <code class="code">end</code></pre><hr width="100%">
 
-<pre><span id="VALpremier_entier_abs"><span class="keyword">val</span> premier_entier_abs</span> : <code class="type">int list -&gt; int list -&gt; int</code></pre>
-<pre><span id="VALdelta_union_q0"><span class="keyword">val</span> delta_union_q0</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEetat">Aef.etat</a> -&gt; <a href="Aef.html#TYPEtransition">Aef.transition</a> list</code></pre>
+<pre><span id="VALpremier_entier_abs"><span class="keyword">val</span> premier_entier_abs</span> : <code class="type">int list -&gt; int list -&gt; int</code></pre><div class="info ">
+<div class="info-desc">
+<p>Renvoie le premier entier naturel qui n'est dans aucune des deux listes données</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> premier naturel qui n'appartient a aucune des listes</li>
+</ul>
+</div>
+<div class="param_info"><code class="code">l1</code> : premiere liste donnee</div>
+<div class="param_info"><code class="code">l2</code> : deuxieme liste donnee</div>
+
+<pre><span id="VALdelta_union_q0"><span class="keyword">val</span> delta_union_q0</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEetat">Aef.etat</a> -&gt; <a href="Aef.html#TYPEtransition">Aef.transition</a> list</code></pre><div class="info ">
+<div class="info-desc">
+<p>renvoie la partie de delta supplementaire pour l'union (issu de la presnece de q0)</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a liste de transitions</li>
+</ul>
+</div>
+
 <pre><span id="EXCEPTIONPasMemeAlphabet"><span class="keyword">exception</span> PasMemeAlphabet</span></pre>
 
-<pre><span id="VALont_meme_alphabet"><span class="keyword">val</span> ont_meme_alphabet</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre>
-<pre><span id="VALunion"><span class="keyword">val</span> union</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre>
-<pre><span id="VALliaisons"><span class="keyword">val</span> liaisons</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEtransition">Aef.transition</a> list</code></pre>
-<pre><span id="VALconcat"><span class="keyword">val</span> concat</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre>
-<pre><span id="VALafficher"><span class="keyword">val</span> afficher</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; unit</code></pre>
-<pre><span id="VALcomplement_delta_debut"><span class="keyword">val</span> complement_delta_debut</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEetat">Aef.etat</a> -&gt; (<a href="Aef.html#TYPEetat">Aef.etat</a> * char * <a href="Aef.html#TYPEetat">Aef.etat</a>) list</code></pre>
-<pre><span id="VALcomplement_delta_fin"><span class="keyword">val</span> complement_delta_fin</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; (<a href="Aef.html#TYPEetat">Aef.etat</a> * char * <a href="Aef.html#TYPEetat">Aef.etat</a>) list</code></pre>
-<pre><span id="VALitere"><span class="keyword">val</span> itere</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre></body></html>
+<pre><span id="VALont_meme_alphabet"><span class="keyword">val</span> ont_meme_alphabet</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre><div class="info ">
+<div class="info-desc">
+<p>Teste si les deux automates données ont le même alphabet</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a boolean</li>
+</ul>
+</div>
+
+<pre><span id="VALunion"><span class="keyword">val</span> union</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>La fonction union prend deux AEF et renvoie l'AEF qui reconnait l'union des deux langagues</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a AEF</li>
+</ul>
+</div>
+
+<pre><span id="VALliaisons"><span class="keyword">val</span> liaisons</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEtransition">Aef.transition</a> list</code></pre><div class="info ">
+<div class="info-desc">
+<p>Construit puis renvoie les transitions faisant le lien entre les deux automates à concatener</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a liste de transitions</li>
+</ul>
+</div>
+
+<pre><span id="VALconcat"><span class="keyword">val</span> concat</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>La fonction concat prend deux AEF et renvoie l'AEF qui reconnait la concatenation des deux langages</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a AEF</li>
+</ul>
+</div>
+
+<pre><span id="VALafficher"><span class="keyword">val</span> afficher</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; unit</code></pre><div class="info ">
+<div class="info-desc">
+<p>La fonction afficher prend un automate fini a en entrée et affiche ses transitions sous forme de texte</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a unit</li>
+</ul>
+</div>
+
+<pre><span id="VALcomplement_delta_debut"><span class="keyword">val</span> complement_delta_debut</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEetat">Aef.etat</a> -&gt; (<a href="Aef.html#TYPEetat">Aef.etat</a> * char * <a href="Aef.html#TYPEetat">Aef.etat</a>) list</code></pre><div class="info ">
+<div class="info-desc">
+<p>Construit et renvoie les transitions à ajouter à la gauche de l'automate</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a liste de transitions</li>
+</ul>
+</div>
+
+<pre><span id="VALcomplement_delta_fin"><span class="keyword">val</span> complement_delta_fin</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; (<a href="Aef.html#TYPEetat">Aef.etat</a> * char * <a href="Aef.html#TYPEetat">Aef.etat</a>) list</code></pre><div class="info ">
+<div class="info-desc">
+<p>Construit et renvoie les transitions à ajouter à la droite de l'automate</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a liste de transitions</li>
+</ul>
+</div>
+
+<pre><span id="VALitere"><span class="keyword">val</span> itere</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre><div class="info ">
+<div class="info-desc">
+<p>La fonction itere prend en entrée un automate fini déterministe a 
+    et renvoie un nouvel automate fini déterministe a' qui est l'itération de l'automate a</p>
+</div>
+<ul class="info-attributes">
+<li><b>Author(s):</b> Marine</li>
+<li><b>Returns</b> a AEF</li>
+</ul>
+</div>
+</body></html>

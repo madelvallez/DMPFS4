@@ -1,7 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css" type="text/css">
-<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta content="text/html"; charset="utf-8" http-equiv="Content-Type">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Start" href="index.html">
 <link title="Index of types" rel=Appendix href="index_types.html">
@@ -20,49 +20,128 @@
 <table>
 <tr><td align="left"><div>A</div></td></tr>
 <tr><td><a href="Aef_lecture.html#VALaccepter_mot">accepter_mot</a> [<a href="Aef_lecture.html">Aef_lecture</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction accepter_mot utilise la fonction lecture_mot pour parcourir le mot dans l'AEF 
+     et renvoie true si le dernier état atteint après avoir parcouru le mot appartient à l'ensemble des états finaux de l'AEF</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_operations.html#VALafficher">afficher</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction afficher prend un automate fini a en entrée et affiche ses transitions sous forme de texte</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>C</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALcomplement_delta_debut">complement_delta_debut</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Construit et renvoie les transitions à ajouter à la gauche de l'automate</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_operations.html#VALcomplement_delta_fin">complement_delta_fin</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Construit et renvoie les transitions à ajouter à la droite de l'automate</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_proprietes.html#VALcompleter">completer</a> [<a href="Aef_proprietes.html">Aef_proprietes</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction completer prend en argument un AEF a, si l'argument est déjà complet la fonction renvoie a sans effectuer de traitement,
+    sinon retourne un nouvel AEF compléte</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_operations.html#VALconcat">concat</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction concat prend deux AEF et renvoie l'AEF qui reconnait la concatenation des deux langages</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>D</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALdelta_union_q0">delta_union_q0</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>renvoie la partie de delta supplementaire pour l'union (issu de la presnece de q0)</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>E</div></td></tr>
 <tr><td><a href="Aef_proprietes.html#VALest_complet">est_complet</a> [<a href="Aef_proprietes.html">Aef_proprietes</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction est_complet prend en argument un AEF (a) et retourne true si l'AEF est complet</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_proprietes.html#VALest_correct">est_correct</a> [<a href="Aef_proprietes.html">Aef_proprietes</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction est_correct prend en argument un AEF (a) et retourne true si l'AEF est correct</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_proprietes.html#VALest_deterministe">est_deterministe</a> [<a href="Aef_proprietes.html">Aef_proprietes</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction est_deterministe prend en argument un AEF a et retourne true si cet automate est déterministe</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>I</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALitere">itere</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction itere prend en entrée un automate fini déterministe a 
+    et renvoie un nouvel automate fini déterministe a' qui est l'itération de l'automate a</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>L</div></td></tr>
 <tr><td><a href="Aef_proprietes.html#VALlangage_vide">langage_vide</a> [<a href="Aef_proprietes.html">Aef_proprietes</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction langage_vide vérifie si l'AEF a reconnaît le langage vide 
+    en vérifiant si aucune transition n'existe dans a.transitions ou si a.etats_F est vide</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_lecture.html#VALlecture_car">lecture_car</a> [<a href="Aef_lecture.html">Aef_lecture</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction lecture_car prend en entrée un état q, 
+    un caractère x et une liste de transitions les_transitions,
+    et retourne l'état cible correspondant à la transition qui part de l'état q et qui est étiquetée par le caractère x</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_lecture.html#VALlecture_mot">lecture_mot</a> [<a href="Aef_lecture.html">Aef_lecture</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>la fonction lecture_car vérifier s'il existe une transition pour le premier caractère du mot à lire et 
+     renvoie l'etat qui correspond à la transition d'une list de caractères</p>
+
+</div>
+</td></tr>
 <tr><td><a href="Aef_operations.html#VALliaisons">liaisons</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Construit puis renvoie les transitions faisant le lien entre les deux automates à concatener</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>O</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALont_meme_alphabet">ont_meme_alphabet</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Teste si les deux automates données ont le même alphabet</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>P</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALpremier_entier_abs">premier_entier_abs</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>Renvoie le premier entier naturel qui n'est dans aucune des deux listes données</p>
+
+</div>
+</td></tr>
 <tr><td align="left"><div>U</div></td></tr>
 <tr><td><a href="Aef_operations.html#VALunion">union</a> [<a href="Aef_operations.html">Aef_operations</a>]</td>
-<td></td></tr>
+<td><div class="info">
+<p>La fonction union prend deux AEF et renvoie l'AEF qui reconnait l'union des deux langagues</p>
+
+</div>
+</td></tr>
 </table>
 </body>
 </html>

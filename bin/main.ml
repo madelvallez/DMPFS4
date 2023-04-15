@@ -3,9 +3,6 @@ open Aef;;
 open Aef_proprietes;;
 open Aef_operations;;
 
-let () = print_endline "Hello, World!"
-
-
 (* reconnait L(exemple1) = a(a^n)b 
    deterministe
    incomplet*)

@@ -1,4 +1,1 @@
-(lang dune 3.7)
-(name DMPF)
-(sections (lib .) (bin ../../bin))
-(files (lib (META dune-package opam)) (bin (DMPF)))
+../../../../default/DMPF.dune-package

@@ -1,4 +1,4 @@
-open Aef ;;
+ open Aef ;;
 
 (*UNION________________________________________________________________*)
 (* renvoie le premier entier naturel qui n'est dans aucune des listes données *)
@@ -79,7 +79,7 @@ let concat (a1: aef) (a2: aef) =
 
 (*AFFICHER___________________________________________________________________________________*)
 (*3.12 affichage*)
-let afficher (a:aef) =
+let afficher (a:aef) : unit =
   let rec produire_texte_transition lt = match lt with
     |[] -> " "
     |(q,x,p)::qt -> (string_of_int q)^ " -> ("^(String.make 1 x)^") "^(string_of_int p)^"\n"^(produire_texte_transition qt)

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Aef_lecture.html">
+<link rel="next" href="Aef_operations.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Aef" rel="Chapter" href="Aef.html">
+<link title="Aef_lecture" rel="Chapter" href="Aef_lecture.html">
+<link title="Aef_proprietes" rel="Chapter" href="Aef_proprietes.html">
+<link title="Aef_operations" rel="Chapter" href="Aef_operations.html"><title>Aef_proprietes</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Aef_lecture.html" title="Aef_lecture">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Aef_operations.html" title="Aef_operations">Next</a>
+</div>
+<h1>Module <a href="type_Aef_proprietes.html">Aef_proprietes</a></h1>
+
+<pre><span id="MODULEAef_proprietes"><span class="keyword">module</span> Aef_proprietes</span>: <code class="code">sig</code> <a href="Aef_proprietes.html">..</a> <code class="code">end</code></pre><hr width="100%">
+<p>La fonction est_correct prend en argument un AEF (a) et retourne true si l'AEF est correct</p>
+
+<pre><span id="VALest_correct"><span class="keyword">val</span> est_correct</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre><p>La fonction est_complet prend en argument un AEF (a) et retourne true si l'AEF est complet</p>
+
+<pre><span id="VALest_complet"><span class="keyword">val</span> est_complet</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre><p>La fonction completer prend en argument un AEF a, si l'argument est déjà complet la fonction renvoie a sans effectuer de traitement,
+    sinon retourne un nouvel AEF compléte</p>
+
+<pre><span id="VALcompleter"><span class="keyword">val</span> completer</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; <a href="Aef.html#TYPEaef">Aef.aef</a></code></pre><p>La fonction vérifie si l'AEF a reconnaît le langage vide 
+    en vérifiant si aucune transition n'existe dans a.transitions ou si a.etats_F est vide</p>
+
+<pre><span id="VALlangage_vide"><span class="keyword">val</span> langage_vide</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre><p>La fonction est_deterministe prend en argument un AEF a et retourne true si cet automate est déterministe</p>
+
+<pre><span id="VALest_deterministe"><span class="keyword">val</span> est_deterministe</span> : <code class="type"><a href="Aef.html#TYPEaef">Aef.aef</a> -&gt; bool</code></pre></body></html>

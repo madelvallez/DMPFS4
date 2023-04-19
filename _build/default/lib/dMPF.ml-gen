@@ -3,6 +3,9 @@
 (** @canonical DMPF.Aef *)
 module Aef = DMPF__Aef
 
+(** @canonical DMPF.Aef_exemples *)
+module Aef_exemples = DMPF__Aef_exemples
+
 (** @canonical DMPF.Aef_lecture *)
 module Aef_lecture = DMPF__Aef_lecture
 

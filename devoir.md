@@ -2,13 +2,15 @@
 
 Le main se trouve dans `DMPFS4/bin/main.ml` 
 
-L'éxécution se fait avec `dune exec DMPF`
+L'execution se fait avec `dune exec DMPF`
 
 Les fonctions du sujet sont définies dans `DMPFS4/lib` dans 4 fichiers: 
 - `aef.ml` pour la définition du type (question 1)
 - `aef_propriete.ml` pour les fonctions de la partie 1
 - `aef_lecture.ml` pour les fonctions de la partie 2
 - `aef_operations.ml` pour les fonctions de la partie 3 
+
+Des aef exemples sont données dans `aef_exemples.ml` dans `DMPFS4/lib`.
 
 # Repartition du travail
 | Question | Marine Delvallez | Gilles Gachiniard | Marwan Laaguid |

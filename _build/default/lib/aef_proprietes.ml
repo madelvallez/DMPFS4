@@ -7,7 +7,6 @@ open Aef;;
     @param a AEF
     @return a boolean 
 *)
- 
 let est_correct = fun a ->
   let etats_non_utilises = List.filter (fun q -> not (List.exists (fun (q', _, q'') -> q = q' || q = q'') a.transitions)) a.etats_Q in
   a.etats_Q <> [] &&
@@ -23,7 +22,6 @@ let est_correct = fun a ->
     @param a AEF
     @return a boolean 
 *)
-
 let est_complet : aef -> bool = fun a ->
   if not (est_correct a) then false else
     let pour_tout_char = fun q ->
@@ -38,11 +36,10 @@ let est_complet : aef -> bool = fun a ->
 (*1.4 completer*) 
 (** La fonction completer prend en argument un AEF a, si l'argument est déjà complet la fonction renvoie a sans effectuer de traitement,
     sinon retourne un nouvel AEF compléte
-    @author Gilles
+    @author Gilles, Marwan
     @param a AEF
     @return a AEF qui est le complété de a
 *)
-
 let completer (a:aef) : aef =
   if est_complet a then a
   else 
@@ -70,16 +67,17 @@ let completer (a:aef) : aef =
       etats_F = a.etats_F
     };;
 
+    
 (*1.5 langage_vide*) 
-(** La fonction vérifie si l'AEF a reconnaît le langage vide 
+(** La fonction langage_vide vérifie si l'AEF a reconnaît le langage vide 
     en vérifiant si aucune transition n'existe dans a.transitions ou si a.etats_F est vide
     @author Gilles
     @param a AEF
     @return a boolean 
 *)
-
 let langage_vide = fun a ->
       a.transitions = [] || a.etats_F = [];;
+
 
 (*1.6 est_deterministe*)
 (** La fonction est_deterministe prend en argument un AEF a et retourne true si cet automate est déterministe
@@ -87,7 +85,6 @@ let langage_vide = fun a ->
     @param a AEF
     @return a boolean 
 *)
-
 let est_deterministe = fun a -> 
   let transition_pour_etat_et_char q x =
     List.filter (fun (q', x', _) -> q' = q && x' = x) a.transitions

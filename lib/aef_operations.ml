@@ -54,6 +54,17 @@ let ont_meme_alphabet (a1:aef) (a2:aef) : bool=
   in egalite_listes a1.alphabet a2.alphabet
 
 
+  exception EtatsNonDisjoints
+
+(**
+    Teste si deux automates ont des ensembles d'etats disjoints
+    @author Marine
+    @param a1 AEF
+    @param a2 AEF
+    @return booleen *)
+let etats_disjoints (a1:aef) (a2:aef) : bool = 
+  List.for_all (fun e -> not (List.mem e a1.etats_Q)) a2.etats_Q
+
 (**  La fonction union prend deux AEF et renvoie l'AEF qui reconnait l'union des deux langagues 
     @author Marine
     @param a1 AEF
@@ -62,6 +73,7 @@ let ont_meme_alphabet (a1:aef) (a2:aef) : bool=
 *)
 let union (a1:aef) (a2:aef) :aef = 
   if not (ont_meme_alphabet a1 a2) then raise PasMemeAlphabet else  
+  if not (etats_disjoints a1 a2) then raise EtatsNonDisjoints else
   let q0 = premier_entier_abs a1.etats_Q a2.etats_Q in
   let etats_union = q0::(a1.etats_Q @ a2.etats_Q) in
   let finaux_union = 
@@ -104,7 +116,8 @@ let liaisons (a1:aef) (a2:aef) : transition list =
 *)
 let concat (a1: aef) (a2: aef) = 
   if not(ont_meme_alphabet a1 a2) then raise  PasMemeAlphabet else 
-    (*on verifie que les automates ont le même alphabet*)
+    if not (etats_disjoints a1 a2) then raise EtatsNonDisjoints else
+    (*on verifie que les automates ont le même alphabet et des etats differents*)
   let etats_QQ = a1.etats_Q @ a2.etats_Q in
   let etats_FF = if List.mem a2.initial a2.etats_F 
                   then (a1.etats_F)@(a2.etats_F) 

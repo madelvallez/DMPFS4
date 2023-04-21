@@ -10,7 +10,7 @@ Les fonctions du sujet sont définies dans `DMPFS4/lib` dans 4 fichiers:
 - `aef_lecture.ml` pour les fonctions de la partie 2
 - `aef_operations.ml` pour les fonctions de la partie 3 
 
-Des aef exemples sont données dans `aef_exemples.ml` dans `DMPFS4/lib`.
+Des aef exemples sont données dans `DMPFS4/lib/aef_exemples.ml`. Ce sont ceux utilisés dans `main.ml`. Une illustration de ces derniers est disponible dans `DFPFS4/schema_exemples_aef`.
 
 # Repartition du travail
 | Question | Marine Delvallez | Gilles Gachiniard | Marwan Laaguid |
@@ -33,4 +33,4 @@ Des aef exemples sont données dans `aef_exemples.ml` dans `DMPFS4/lib`.
 
 
 # Descriptions des fonctions
-Voir la documentation dans `DMPFS4/lib/doc/`
+Voir la documentation à `DMPFS4/lib/doc/index.html`

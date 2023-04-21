@@ -1,4 +1,4 @@
-open Aef ;;
+open Aef 
 
 (* Q10 UNION________________________________________________________________*)
 
@@ -14,7 +14,7 @@ let  premier_entier_abs l1 l2 =
         if List.mem n l then
         (aux_premier_entier_abs l (n+1))
         else n
-    in aux_premier_entier_abs (l1@l2) 0 ;;
+    in aux_premier_entier_abs (l1@l2) 0 
         
  
 (** 
@@ -141,7 +141,7 @@ let afficher (a:aef) : unit =
   let rec produire_texte_transition lt = match lt with
     |[] -> " "
     |(q,x,p)::qt -> (string_of_int q)^ " -> ("^(String.make 1 x)^") "^(string_of_int p)^"\n"^(produire_texte_transition qt)
-  in print_endline (produire_texte_transition a.transitions);;
+  in print_endline (produire_texte_transition a.transitions)
 
 
 (*ITERE__________________________________________________________________________*)

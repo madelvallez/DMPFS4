@@ -7,12 +7,13 @@ open Aef;;
     @param a AEF
     @return a boolean 
 *)
-let est_correct = fun a ->
+let est_correct : aef -> bool = fun a ->
   let etats_non_utilises = List.filter (fun q -> not (List.exists (fun (q', _, q'') -> q = q' || q = q'') a.transitions)) a.etats_Q in
   a.etats_Q <> [] &&
   a.transitions <> [] &&
   List.for_all (fun etat -> List.mem etat a.etats_Q) a.etats_F &&
   List.for_all (fun (e, _, e') -> List.mem e a.etats_Q && List.mem e' a.etats_Q) a.transitions &&
+  List.mem a.initial a.etats_Q &&
   etats_non_utilises = [];;
 
 
@@ -40,7 +41,7 @@ let est_complet : aef -> bool = fun a ->
     @param a AEF
     @return a AEF qui est le complété de a
 *)
-let completer (a:aef) : aef =
+let completer : aef -> aef = fun a ->
   if est_complet a then a
   else 
     let rec nouveau_etat n =
@@ -75,7 +76,7 @@ let completer (a:aef) : aef =
     @param a AEF
     @return a boolean 
 *)
-let langage_vide = fun a ->
+let langage_vide : aef -> bool = fun a ->
       a.transitions = [] || a.etats_F = [];;
 
 
@@ -85,7 +86,7 @@ let langage_vide = fun a ->
     @param a AEF
     @return a boolean 
 *)
-let est_deterministe = fun a -> 
+let est_deterministe : aef -> bool = fun a -> 
   let transition_pour_etat_et_char q x =
     List.filter (fun (q', x', _) -> q' = q && x' = x) a.transitions
   in
@@ -93,4 +94,4 @@ let est_deterministe = fun a ->
       List.for_all (fun x ->
           List.length (transition_pour_etat_et_char q x) <= 1
         ) a.alphabet
-    ) a.etats_Q
+    ) a.etats_Q;;
